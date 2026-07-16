@@ -6,10 +6,11 @@ This repository contains solutions for **Super AI Engineer Season 6** hackathon 
 
 ## Project Overview
 
-Three distinct hackathon challenges showcasing different AI/ML techniques:
+Three distinct hackathon challenges and the multi-domain final challenge showcasing different AI/ML techniques:
 - **Data Storytelling** — Exploratory analysis & visualization
 - **Computer Vision (OCR)** — Election vote data extraction
 - **Retrieval Augmented Generation (RAG)** — Intelligent document QA system
+- **Last Mission** — 5 Domains covering Computer Vision, NLP, Signal Processing, Tabular ML, and Multimodal LLMs
 
 ---
 
@@ -127,6 +128,35 @@ Response
 
 ---
 
+### Last Mission: Multi-Domain Final Challenge
+**Folder:** `Last-Mission/`
+
+#### Challenge Description
+A comprehensive final challenge featuring five distinct domains that test key artificial intelligence and machine learning disciplines:
+
+1. **Domain 1: House Recognition**
+   - **Task**: Identify house styles/attributes from image data.
+   - **Techniques**: ConvNeXt Base v5 backbone, custom transforms, PyTorch training, and learning rate scheduling.
+   - **Tech Stack**: PyTorch, ConvNeXt, torchvision.
+2. **Domain 2: Thai Word Segmentation**
+   - **Task**: Segment Thai text into word boundaries using sequence labeling.
+   - **Techniques**: Tokenizer customization, LST20 dataset preparation, Transformer sequence classification (NER style with B_W, I_W, E_W, S_W labels), and post-processing corrections.
+   - **Tech Stack**: PyTorch, Hugging Face Transformers, LST20 corpus.
+3. **Domain 3: Sleep Stage Classification**
+   - **Task**: Classify sleep stages from biosignal data (EEG/EOG/etc.).
+   - **Techniques**: Parallel feature extraction, time-domain statistics (skew, kurtosis), frequency-domain spectral analysis (Welch PSD), and LightGBM with StratifiedGroupKFold validation.
+   - **Tech Stack**: Scipy, Welch PSD, LightGBM, joblib.
+4. **Domain 4: Heart Disease Prediction**
+   - **Task**: Predict history of heart disease or heart attacks from clinical tabular data.
+   - **Techniques**: Class imbalance handling, Optuna hyperparameter optimization maximizing F-beta score, and probability threshold tuning.
+   - **Tech Stack**: LightGBM, Optuna, Scikit-learn.
+5. **Domain 5: Thai Image Captioning v2**
+   - **Task**: Generate descriptions for images in the Thai language.
+   - **Techniques**: Qwen2.5-VL-3B vision-language model, Unsloth training acceleration, DoRA parameter-efficient fine-tuning, and Beam Search inference.
+   - **Tech Stack**: Qwen2.5-VL, Unsloth, PyTorch, Hugging Face SFTTrainer.
+
+---
+
 ##  Repository Structure
 
 ```
@@ -139,9 +169,15 @@ AIAT_Super_AI_Engineer_SS6/
 ├── Hackathon2/
 │   ├── Typhoon_OCR.ipynb             # OCR pipeline implementation
 │   └── Readme.md                     # Hackathon 2 details
-└── Hackathon3/
-    ├── Fahmai_Rag_Improved.ipynb     # RAG system implementation
-    └── Readme.md                     # Hackathon 3 details
+├── Hackathon3/
+│   ├── Fahmai_Rag_Improved.ipynb     # RAG system implementation
+│   └── Readme.md                     # Hackathon 3 details
+└── Last-Mission/
+    ├── Domain1.ipynb                 # House Recognition (ConvNeXt)
+    ├── Domain2.ipynb                 # Thai Word Segmentation (Transformers)
+    ├── Domain3.ipynb                 # Sleep Stage Classification (LightGBM + Welch PSD)
+    ├── Domain4.ipynb                 # Heart Disease Prediction (LightGBM + Optuna)
+    └── Domain5.ipynb                 # Thai Image Captioning (Qwen2.5-VL + Unsloth)
 ```
 
 ---
@@ -218,5 +254,5 @@ All solutions were submitted for **Super AI Engineer Season 6** (Season 6, Year 
 
 ---
 
-**Last Updated**: March 30, 2026
-**Status**: Competition Submissions Complete 
+**Last Updated**: July 16, 2026
+**Status**: Competition Submissions & Final Mission Complete
